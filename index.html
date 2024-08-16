@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+  body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-top: 20%;
+  gap: 2rem;
+  }
+  .button2{
+   display: none;
+  }
+ </style>
+
+</head>
+ <body>
+ 
+  <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="" id="myImg">
+  <button class="button1">On</button>
+  <button class="button2">Of</button>
+
+  <script>
+   let imgMain=document.querySelector('#myImg')
+    let img2= 'https://www.w3schools.com/js/pic_bulbon.gif'
+    let img1='https://www.w3schools.com/js/pic_bulboff.gif'
+   
+   let on =document.querySelector('.button1');
+   let off =document.querySelector('.button2');
+   on.addEventListener('click',()=>{
+     imgMain.src=img2
+      let blockDisplay =off.style.display='block'
+   })
+   off.addEventListener('click',()=>{
+     imgMain.src=img1
+   })
+  </script>
+</body>
+</html>
