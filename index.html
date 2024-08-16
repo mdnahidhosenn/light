@@ -32,12 +32,16 @@
    
    let on =document.querySelector('.button1');
    let off =document.querySelector('.button2');
+    let printt =document.querySelector('.button3');
    on.addEventListener('click',()=>{
      imgMain.src=img2
       let blockDisplay =off.style.display='block'
    })
    off.addEventListener('click',()=>{
      imgMain.src=img1
+   })
+   printt.addEventListener('click',()=>{
+    window.print()
    })
   </script>
 </body>
