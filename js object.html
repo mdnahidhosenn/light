@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+ <h1 id="demo"></h1>
+ <script>
+    
+    // --------------------js object--------------
+
+ {
+
+// ----------------------
+const person = {
+ fistName:'john',
+ lastName:'doe',
+ age:50,
+ eyeColor:'blue'
+}
+console.log(person.fistName);
+console.log(person['fistName']);
+
+console.log(person);
+const person2={}
+person2.fistName='john',
+person2.lastName='doe',
+person2.age='50',
+person2.eyeColor='blue'
+console.log(person2);
+
+
+const person3 =new Object()
+person3.fistName='john',
+person3.lastName='doe',
+person3.age='50',
+person3.eyeColor='blue'
+console.log(person3.age);
+
+
+
+const person4 = {
+ firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+console.log(person4.fullName());
+console.log(person4['fullName']());
+
+
+
+
+
+
+//Create an Object
+const person5 = {
+  firstName:"John",
+  lastName:"Doe",
+  age:50, eyeColor:"blue"
+}
+console.log(person5);
+// Create a copy
+const x = person5;
+
+// Change Age in both
+x.age = 10;
+console.log(x);
+   }
+
+
+       // --------------------js object Methods--------------
+    {
+
+// ---------------------
+
+// Create an Object
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+};
+
+// Add a Method
+person.name = function() {
+  return this.firstName + " " + this.lastName;
+};
+console.log(person.name());
+// Add a Method
+person.name = function() {
+  return (this.firstName + " " + this.lastName).toUpperCase();
+
+};
+  console.log(person.name());
+
+        }
+
+
+
+ {
+
+  // -------------------- JavaScript Display Objects-------------
+
+  // -------------------------------
+
+// Create an Object
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+// Build a Text
+let text = "";
+for (let x in person) {
+  text += person[x] + " ";
+};
+
+
+console.log(text);
+
+
+
+const person2 = {
+  name: "John",
+  age: 30,
+  city: "New York",
+};
+
+// Create an Array
+const myArray = Object.values(person2);
+// Stringify Object
+let myString = JSON.stringify(person);
+console.log(myString);
+console.log(myArray);
+
+
+
+
+
+const fruits = {
+   Bananas:300,
+   Oranges:200, 
+   Apples:500};
+
+let text2 = "";
+for (let [fruit, value] of Object.entries(fruits)) {
+  text2 += fruit + " : " + value + " , ";
+}
+document.getElementById("demo").innerHTML = text2;
+console.log(text2);
+
+  }
+
+
+
+
+{
+  // ---------------- JavaScript Object Constructors-------------
+
+  // -------------------------------
+
+
+
+   // Constructor Function for Person objects
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+  this.nationality = "English";
+}
+
+// Create a Person object
+const myFather = new Person("John", "Doe", 50, "blue");
+const myMother = new Person("Sally", "Rally", 48, "green");
+myFather.country="Bangladesh"
+
+// Will Not Work
+Person.nationality = "English";
+// Add a new Property
+Person.prototype.language = "English";
+
+console.log(myFather.age);
+console.log(myMother.age);
+
+console.log(myFather.nationality);
+
+console.log(myFather.country);
+console.log(myMother.country);
+
+console.log(myFather.language);
+console.log(myMother.language);
+
+
+
+
+
+// Constructor Function for Person objects
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+  this.fullName = function() {
+    return this.firstName + " " + this.lastName
+  };
+}
+const myMotherr = new Person("Sally", "Rally", 48, "green");
+
+// Add a Name Method
+myMotherr.changeName = function (name) {
+  this.lastName = name;
+}
+
+// Change Name
+myMotherr.changeName("Doe");
+console.log(myMotherr.lastName);
+
+// Create a Person object
+const myFatherr = new Person("John", "Doe", 50, "blue");
+console.log("My father is " + myFather.fullName() );
+
+
+
+// not working
+// Person.changeName = function (name) {
+//   this.lastName = name;
+// }
+
+// myMother.changeName("Doe");
+
+
+// working
+Person.prototype.changeName = function (name) {
+  this.lastName = name;
+}
+
+myMother.changeName("Doe");
+console.log(myMother.lastName);
+  }
+
+new Object()   // A new Object object
+new Array()    // A new Array object
+new Map()      // A new Map object
+new Set()      // A new Set object
+new Date()     // A new Date object
+new RegExp()   // A new RegExp object
+new Function() // A new Function object
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </script>
+</body>
+</html>
