@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+ <p id="demo"></p>
+
+<script>
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let length = text.length;
+console.log(length);
+
+let text2 = "HELLO WORLD";
+let char = text2.charAt(0);
+console.log(char);
+
+let text3 = "HELLO WORLD";
+let char3 = text3.charCodeAt(0);
+console.log(char3);
+
+const name = "W3Schools";
+let letter = name.at(2);
+console.log(letter);
+
+const name2 = "W3Schools";
+let letter2 = name2[2];
+console.log(letter2);
+
+
+let text4 = "HELLO WORLD";
+text4[0] = "A";    // Gives no error, but does not work
+
+
+let text6 = "Apple, Banana, Kiwi";
+let part = text6.slice(7, 13);
+console.log(part);
+
+
+let text7 = "Apple, Banana, Kiwi";
+let part7 = text7.slice(7);
+
+
+let text8 = "Apple, Banana, Kiwi";
+let part8 = text8.slice(-12);
+console.log(part8);
+
+let text9 = "Apple, Banana, Kiwi";
+let part9 = text9.slice(-12, -6);
+console.log(part9);
+
+let str = "Apple, Banana, Kiwi";
+let part5 = str.substring(7, 13);
+console.log(part5);
+
+
+let str2 = "Apple, Banana, Kiwi";
+let part2= str2.substr(7, 6);
+console.log(part2);
+
+
+let str3 = "Apple, Banana, Kiwi";
+let part3 = str3.substr(7);
+console.log(part3);
+
+
+
+let str4 = "Apple, Banana, Kiwi";
+let part4 = str4.substr(-4);
+console.log(part4);
+
+
+
+let text1 = "Hello World! I AM NAYEM";
+let text10 = text1.toUpperCase();
+let text11=text1.toLowerCase();
+console.log(text10);
+console.log(text11);
+
+
+
+let text12 = "Hello";
+let text13 = "World";
+let text14 = text12.concat(' '+ text13);
+console.log(text14);
+
+
+text = "Hello" + " " + "World!";
+console.log(text);
+text = "Hello".concat(" ", "World!");
+console.log(text);
+
+
+let text15 = "      Hello World!      ";
+let len=text15.length
+console.log(len);
+ let text16 = text15.trim();
+ let text17=text16.length
+ console.log(text17);
+
+ // let texta = texta.trimStart();
+ // let textb = textb.trimEnd();
+
+
+
+ let numb = 5;
+let textc = numb.toString();
+let padded = textc.padStart(4,"0");
+let padded1 = textc.padEnd(4,"0");
+console.log(padded);
+console.log(padded1);
+
+
+
+
+let textd = " Hello world! ";
+let result = textd.repeat(4);
+console.log(result);
+
+
+
+let texte = "Please visit Microsoft! Microsoft";
+let newText = texte.replace("Microsoft", "W3Schools");
+console.log(newText);
+let newText2a = texte.replace(/MICROSOFT/i, "W3Schools");
+console.log(newText2a);
+let newText2b = texte.replace(/Microsoft/g, "W3Schools");
+console.log(newText2b);
+
+
+let textad = "I love cats. cats are very easy to love " 
+text = textad.replaceAll("cats","dogs");
+console.log(text);
+
+
+
+let strn='Hello world'
+let myArray=strn.split(' ')
+console.log(myArray);
+
+
+
+
+ // --------------------JavaScript String Search---------------
+{ 
+ let text = "Please locate where 'locate' occurs!";
+ let index = text.indexOf("locate");
+ console.log(index);
+}
+
+{
+ let text = "Please locate where 'locate' occurs!";
+let index = text.lastIndexOf("locate");
+console.log(index);
+}
+
+// {
+
+//  // Both indexOf(), and lastIndexOf() return -1 if the text is not found:
+
+// Example
+// let text = "Please locate where 'locate' occurs!";
+// let index = text.lastIndexOf("John");
+// console.log(index);
+// }
+
+
+{
+ let text = "Please locate where 'locate' occurs!";
+let index = text.indexOf("locate", 15);
+console.log(index);
+}
+
+{
+ let text = "Please locate where 'locate' occurs!";
+let index = text.lastIndexOf("locate", 15);
+console.log(index);
+}
+
+
+{
+ let text = "Please locate where 'locate' occurs!";
+let index = text.search("locate");
+console.log(index);
+
+}
+
+
+{
+ let text = "The rain in SPAIN stays mainly in the plain";
+let index= text.match("ain");
+console.log(index);
+
+let index2=text.match(/ain/g);
+console.log(index2);
+
+let index3=text.match(/ain/gi);
+console.log(index3);
+
+
+}
+
+{
+ let text = "I love cats. Cats are very easy to love. Cats are very popular."
+ const match= text.matchAll("Cats");
+ console.log(match);
+ let arr=Array.from(match)
+ console.log(arr);
+}{
+ let text = "I love cats. Cats are very easy to love. Cats are very popular."
+ const match= text.matchAll(/Cats/gi);
+ let arr=Array.from(match)
+ console.log(arr);
+}
+
+{
+ let text = "Hello world, welcome to the universe.";
+let bolean= text.includes("world");
+console.log(bolean);
+}
+{
+ let text = "Hello world, welcome to the universe.";
+let bolean= text.includes("world", 12);
+console.log(bolean);
+}
+
+{
+ let text = "Hello world, welcome to the universe.";
+let bolean= text.startsWith("Hello");
+console.log(bolean);
+}
+
+{
+ // Returns false
+ let text = "Hello world, welcome to the universe.";
+text.startsWith("world", 5)
+
+// Returns true:
+let text2 = "Hello world, welcome to the universe.";
+text2.startsWith("world", 6)
+
+}
+
+{
+ let text = "John Doe";
+let bolean= text.endsWith("Doe");
+console.log(bolean);
+}
+{
+let text = "Hello world, welcome to the  universe.";
+let bolean= text.endsWith("world", 11);
+console.log(bolean);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
